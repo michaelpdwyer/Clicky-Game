@@ -1,11 +1,11 @@
 import React from 'react';
 import './Container.css';
-import Character from '../Character';
+import clickPics from '../clickPics';
 
-// main container for each Character component
-// loops through each index in props.characters, which contains an array of character images
-// to create a new Character component for each image
-// attaches the passed down clickEvent function to each Character component
+// main container for each Image component
+// loops through each index in props.images, which contains an array of images
+// to create a new Image component for each image
+// attaches the passed down clickEvent function to each image component
 const Container = props => (
   // loops through
   <div
@@ -15,7 +15,7 @@ const Container = props => (
         : 'container d-flex flex-wrap justify-content-center'
     }
   >
-    {props.characters.map((a, i) => <Character name={a} key={i} clickEvent={props.clickEvent} />)}
+    {props.clickPics.map((a, i) => <clickPics name={a} key={i} clickEvent={props.clickEvent} />)}
   </div>
 );
 
